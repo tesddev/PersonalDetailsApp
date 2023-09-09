@@ -41,9 +41,33 @@ class ViewController: UIViewController {
         return label
     }()
     
+    var theNameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Tesleem Amuda"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .boldSystemFont(ofSize: 16)
+        return label
+    }()
+    
+    var theSlackNameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Tes"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .boldSystemFont(ofSize: 16)
+        return label
+    }()
+    
+    var theTrackLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Mobile"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .boldSystemFont(ofSize: 16)
+        return label
+    }()
+    
     private let detailsView: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemGreen.withAlphaComponent(0.3)
+        view.backgroundColor = .systemGreen.withAlphaComponent(0.1)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 8
         return view
@@ -76,9 +100,9 @@ class ViewController: UIViewController {
         detailsView.addSubview(nameLabel)
         detailsView.addSubview(trackLabel)
         detailsView.addSubview(slackNameLabel)
-//        detailsView.addSubview(UIView)
-//        detailsView.addSubview(UIView)
-        //        detailsView.addSubview(UIView)
+        detailsView.addSubview(theNameLabel)
+        detailsView.addSubview(theSlackNameLabel)
+        detailsView.addSubview(theTrackLabel)
 
         
         NSLayoutConstraint.activate([
@@ -98,6 +122,15 @@ class ViewController: UIViewController {
             
             trackLabel.bottomAnchor.constraint(equalTo: detailsView.bottomAnchor, constant: -20),
             trackLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor),
+            
+            theNameLabel.topAnchor.constraint(equalTo: detailsView.topAnchor, constant: 20),
+            theNameLabel.trailingAnchor.constraint(equalTo: detailsView.trailingAnchor, constant: -20),
+            
+            theSlackNameLabel.centerYAnchor.constraint(equalTo: detailsView.centerYAnchor),
+            theSlackNameLabel.trailingAnchor.constraint(equalTo: theNameLabel.trailingAnchor),
+            
+            theTrackLabel.bottomAnchor.constraint(equalTo: detailsView.bottomAnchor, constant: -20),
+            theTrackLabel.trailingAnchor.constraint(equalTo: theNameLabel.trailingAnchor),
             
             goToGithubButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
             goToGithubButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
