@@ -73,6 +73,16 @@ class ViewController: UIViewController {
         return view
     }()
     
+    lazy var profileImageView: UIImageView = {
+        let imageView = UIImageView(frame: CGRect())
+        imageView.image = UIImage(named: "profile")
+        imageView.contentMode = .scaleAspectFit
+        imageView.layer.cornerRadius = 12
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
     lazy var goToGithubButton: UIButton = {
         let button = UIButton()
         button.setTitle("Open GitHub", for: .normal)
@@ -103,6 +113,7 @@ class ViewController: UIViewController {
         detailsView.addSubview(theNameLabel)
         detailsView.addSubview(theSlackNameLabel)
         detailsView.addSubview(theTrackLabel)
+        view.addSubview(profileImageView)
 
         
         NSLayoutConstraint.activate([
@@ -131,6 +142,11 @@ class ViewController: UIViewController {
             
             theTrackLabel.bottomAnchor.constraint(equalTo: detailsView.bottomAnchor, constant: -20),
             theTrackLabel.trailingAnchor.constraint(equalTo: theNameLabel.trailingAnchor),
+            
+            profileImageView.topAnchor.constraint(equalTo: detailsView.bottomAnchor, constant: 30),
+            profileImageView.widthAnchor.constraint(equalTo: goToGithubButton.widthAnchor),
+            profileImageView.bottomAnchor.constraint(equalTo: goToGithubButton.topAnchor, constant: -30),
+            profileImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             goToGithubButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
             goToGithubButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
