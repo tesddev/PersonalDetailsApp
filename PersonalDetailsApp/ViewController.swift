@@ -19,25 +19,25 @@ class ViewController: UIViewController {
     
     var nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Name"
+        label.text = "Name:"
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .boldSystemFont(ofSize: 20)
+        label.font = .systemFont(ofSize: 16)
         return label
     }()
     
     var slackNameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Slack name"
+        label.text = "Slack name:"
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .boldSystemFont(ofSize: 20)
+        label.font = .systemFont(ofSize: 16)
         return label
     }()
     
     var trackLabel: UILabel = {
         let label = UILabel()
-        label.text = "Track"
+        label.text = "Track:"
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .boldSystemFont(ofSize: 20)
+        label.font = .systemFont(ofSize: 16)
         return label
     }()
     
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         let view = UIView()
         view.backgroundColor = .systemGreen.withAlphaComponent(0.3)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.cornerRadius = 3
+        view.layer.cornerRadius = 8
         return view
     }()
     
@@ -57,7 +57,7 @@ class ViewController: UIViewController {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .medium)
         button.addTarget(self, action: #selector(didTapGithubButton), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.layer.cornerRadius = 8
+        button.layer.cornerRadius = 5
         return button
     }()
     
@@ -73,11 +73,12 @@ class ViewController: UIViewController {
         view.addSubview(headerLabel)
         view.addSubview(goToGithubButton)
         view.addSubview(detailsView)
+        detailsView.addSubview(nameLabel)
+        detailsView.addSubview(trackLabel)
+        detailsView.addSubview(slackNameLabel)
 //        detailsView.addSubview(UIView)
 //        detailsView.addSubview(UIView)
-//        detailsView.addSubview(UIView)
-//        detailsView.addSubview(UIView)
-//        detailsView.addSubview(UIView)
+        //        detailsView.addSubview(UIView)
 
         
         NSLayoutConstraint.activate([
@@ -87,7 +88,16 @@ class ViewController: UIViewController {
             detailsView.topAnchor.constraint(equalTo: headerLabel.bottomAnchor, constant: 30),
             detailsView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             detailsView.widthAnchor.constraint(equalTo: goToGithubButton.widthAnchor),
-            detailsView.heightAnchor.constraint(equalToConstant: 48),
+            detailsView.heightAnchor.constraint(equalToConstant: 160),
+            
+            nameLabel.topAnchor.constraint(equalTo: detailsView.topAnchor, constant: 20),
+            nameLabel.leadingAnchor.constraint(equalTo: detailsView.leadingAnchor, constant: 20),
+            
+            slackNameLabel.centerYAnchor.constraint(equalTo: detailsView.centerYAnchor),
+            slackNameLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor),
+            
+            trackLabel.bottomAnchor.constraint(equalTo: detailsView.bottomAnchor, constant: -20),
+            trackLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor),
             
             goToGithubButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
             goToGithubButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
