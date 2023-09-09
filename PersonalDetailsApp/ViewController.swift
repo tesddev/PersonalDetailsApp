@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         label.text = "Name:"
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 16)
+        label.textColor = .gray
         return label
     }()
     
@@ -30,6 +31,7 @@ class ViewController: UIViewController {
         label.text = "Slack name:"
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 16)
+        label.textColor = .gray
         return label
     }()
     
@@ -38,6 +40,7 @@ class ViewController: UIViewController {
         label.text = "Track:"
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 16)
+        label.textColor = .gray
         return label
     }()
     
