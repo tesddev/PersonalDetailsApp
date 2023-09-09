@@ -13,6 +13,7 @@
 		82681E9E2AACB24700EDBA9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82681E9C2AACB24700EDBA9E /* Main.storyboard */; };
 		82681EA02AACB24800EDBA9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82681E9F2AACB24800EDBA9E /* Assets.xcassets */; };
 		82681EA32AACB24800EDBA9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82681EA12AACB24800EDBA9E /* LaunchScreen.storyboard */; };
+		82681EAB2AACB31B00EDBA9E /* GithubProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82681EAA2AACB31B00EDBA9E /* GithubProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		82681E9F2AACB24800EDBA9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82681EA22AACB24800EDBA9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82681EA42AACB24800EDBA9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82681EAA2AACB31B00EDBA9E /* GithubProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				82681E962AACB24700EDBA9E /* AppDelegate.swift */,
 				82681E982AACB24700EDBA9E /* SceneDelegate.swift */,
 				82681E9A2AACB24700EDBA9E /* ViewController.swift */,
+				82681EAA2AACB31B00EDBA9E /* GithubProfileViewController.swift */,
 				82681E9C2AACB24700EDBA9E /* Main.storyboard */,
 				82681E9F2AACB24800EDBA9E /* Assets.xcassets */,
 				82681EA12AACB24800EDBA9E /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82681E9B2AACB24700EDBA9E /* ViewController.swift in Sources */,
+				82681EAB2AACB31B00EDBA9E /* GithubProfileViewController.swift in Sources */,
 				82681E972AACB24700EDBA9E /* AppDelegate.swift in Sources */,
 				82681E992AACB24700EDBA9E /* SceneDelegate.swift in Sources */,
 			);
